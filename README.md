@@ -3,7 +3,7 @@ Programming C++
 
 Compiling on Ubuntu with something like this:
 
-g++ -Wall -std=c++11 -o hello_world hello_world.cp
+g++ -Wall -std=c++11 -o hello_world hello_world.cpp
 
 ===
 
@@ -66,8 +66,8 @@ This command compiles and links (since -c not used) the code files
 "myProgram".
 
 There are other command formats, flags,  and shortcuts, which are not
-listed here.  The above commands are sufficient for basic compilation
-needs.
+listed here.  The above commands are sufficient for basic compilation needs.
+
 ---------------------------------------------------------------------
 
 Example:
