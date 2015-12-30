@@ -13,12 +13,18 @@ int main()
 
     if (married) {
         cout << "The guy is married\n";
-        //count << "Flying time is " << flying_time << "\n";
-        //count << "Decimal point character is " << decimal_point << "\n";
+        cout << "Flying time is " << flying_time << "\n";
+        cout << "Decimal point character is " << decimal_point << "\n";
     }
 
     cout << "Hello, " << first_name << ", you are " << age << " years old!\n";
 
     string full_name = first_name + ' ' + last_name;
     cout << "full name: " << full_name << "\n";
+
+    cout << "age = " << age
+        << "\nage * 3 = " << (age * 3)
+        << "\nage + 2 = " << (age + 2)
+        << "\nsqrt(age) = " << sqrt(age)
+        << '\n';
 }
