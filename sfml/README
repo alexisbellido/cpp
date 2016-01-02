@@ -1,0 +1,20 @@
+Basic SFML for Ubuntu
+=========================
+
+http://www.sfml-dev.org/tutorials/2.3/start-linux.php
+
+Install SFML from Ubuntu repository and verify where files are saved:
+sudo apt-get install -y libsfml-dev
+sudo dpkg -L libsfml-dev
+
+Compile basic example:
+
+g++ -Wall -std=c++11 -c mysfml.cpp 
+g++ -Wall -std=c++11 mysfml.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
+./sfml-app 
+
+If using precompiled binaries (Linux GCC-64-bit for my examples):        
+
+g++ -Wall -std=c++11 -c mysfml2.cpp -I /home/alexis/lib/SFML/include/
+g++ -Wall -std=c++11 mysfml2.o -o sfml-app2 -L /home/alexis/lib/SFML/lib/ -lsfml-graphics -lsfml-window -lsfml-system
+export LD_LIBRARY_PATH=/home/alexis/lib/SFML/lib/ && ./sfml-app2
