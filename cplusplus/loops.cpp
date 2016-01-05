@@ -25,4 +25,18 @@ int main()
     cin >> age;
     cout << "So, you have " << age << '\n';
 
+    int a, b;
+    cout << "enter two ints: " << '\n';
+    cin >> a >> b;
+    cin.ignore(256, '\n'); // see: http://www.cplusplus.com/forum/general/1477/
+    cout << a << ' ' << b << '\n';
+
+    // Use getline to get string with spaces
+    string mystr;
+    cout << "enter string that may have spaces: " << '\n';
+    getline(cin, mystr);
+    cout << "You typed: " << mystr << '\n';
+
+    return 0;
+
 }
