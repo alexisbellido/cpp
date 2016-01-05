@@ -10,6 +10,11 @@ int main()
     cout << "Some text" << endl;
     cout << "Another line" << '\n';
 
+    cout << "Basic for loop" << '\n';
+    for (int i = 0; i < 10; i++) {
+        cout << i << '\n';
+    }
+
     vector<int> nums = {2, 3, 6, 8, 12, 14};
     cout << "Size of nums: " << nums.size() << '\n';
     /*
@@ -36,6 +41,11 @@ int main()
     cout << "enter string that may have spaces: " << '\n';
     getline(cin, mystr);
     cout << "You typed: " << mystr << '\n';
+
+    // constructor initialization, see: http://www.cplusplus.com/doc/tutorial/variables/
+    // it's equivalent to string country = "bolivia"
+    string country ("bolivia");
+    cout << country << '\n';
 
     return 0;
 
