@@ -17,4 +17,6 @@ int main()
         previous = current;
     }
 
+    return 0;
+
 }
