@@ -5,10 +5,8 @@ Compiling on Ubuntu with something like this:
 
 g++ -Wall -std=c++11 -o hello_world hello_world.cpp
 
-===
-
 Compiling C++ programs with g++
--------------------------------
+----------------------------------------------------
 
 The base command for the Gnu C compiler is "gcc"
 The base command for the Gnu C++ compiler is "g++"
@@ -124,3 +122,19 @@ g++ objectfile-1, objectfile-2, ... [only object files in the list]
 does just linkage because none of the object files need compilation.
 (and the output file will be a.out)
 This would generate only linktime errors.
+
+Docker
+----------------------------------------------------
+
+
+.. code-block:: bash
+
+  $ docker run -it -w /root -v "$PWD":/root --name mycpp-1 --hostname mycpp-1 gcc:7.1.0
+
+Start the container later and get a bash command line.
+
+.. code-block:: bash
+
+  $ docker start mycpp-1
+  $ docker exec -it mycpp-1 /bin/bash
+
