@@ -1,15 +1,20 @@
-# cpp
-Programming C++
+Programming C and C++
+====================================================
 
-Compiling on Ubuntu with something like this:
+Compiling C programs with gcc
+----------------------------------------------------
 
-g++ -Wall -std=c++11 -o hello_world hello_world.cpp
+The base command for the Gnu C compiler is gcc.
+
+.. code-block:: bash
+
+  $ gcc -o hello hello.c
+
 
 Compiling C++ programs with g++
 ----------------------------------------------------
 
-The base command for the Gnu C compiler is "gcc"
-The base command for the Gnu C++ compiler is "g++"
+The base command for the Gnu C++ compiler is g++.
 
 Single File Programs
 --------------------
@@ -17,15 +22,25 @@ Single File Programs
 To compile a program that is in a single file, the easiest compilation
 uses the command format:
 
-   g++ <filename>
+.. code-block:: bash
+
+  $ g++ <filename>
 
 (where the filename ends with ".cpp").
 
-Example:
-    g++ prog1.cpp
+.. code-block:: bash
+
+  $ g++ prog1.cpp
 
 This command will create an executable program called "a.out" (the default
 executable target name when one is not specified).
+
+Compiling on Ubuntu with something like this:
+
+.. code-block:: bash
+
+  $ g++ -Wall -std=c++11 -o hello_world hello_world.cpp
+
 
 ---------------------------------------------------------
 
@@ -35,7 +50,9 @@ Multiple File Programs
 To invoke the Compile stage, which translates source code (.cpp files)
 into object code (.o files), use the -c flag.  Format:
 
-  g++ -c <filename>
+.. code-block:: bash
+
+  $ g++ -c <filename>
 
 When the -c option is NOT used, the compiler will expect the command to 
 give everything necessary to compile AND link -- to make the executable.
@@ -43,21 +60,29 @@ give everything necessary to compile AND link -- to make the executable.
 To name a target (something other than the default filename, use the -o flag.  
 Format:
 
-  g++ -o <target_name> <remainder of command>
+.. code-block:: bash
+
+  $ g++ -o <target_name> <remainder of command>
 
 A few examples:
 
-  g++ -o yadda.o -c fraction.cpp
+.. code-block:: bash
+
+  $ g++ -o yadda.o -c fraction.cpp
 
 This command invokes just the compile stage on fraction.cpp, but names the 
 object code file "yadda.o" (instead of the default "fraction.o").
 
-  g++ -o bob.exe circle.o main.o
+.. code-block:: bash
+
+  $ g++ -o bob.exe circle.o main.o
 
 This command links the two object code files ("circle.o" and "main.o") 
 into an executable, called "bob.exe" (instead of the default "a.out").
 
-  g++ -o myProgram thing.cpp main.cpp
+.. code-block:: bash
+
+  $ g++ -o myProgram thing.cpp main.cpp
 
 This command compiles and links (since -c not used) the code files 
 "thing.cpp" and "main.cpp" together into the executable program called 
@@ -74,17 +99,28 @@ Example:
 The following example is the step by step compilation of the files for
 the fraction class example.
 
-  To compile the cpp files into object code:
-                    g++ -c frac.cpp
-                    g++ -c main.cpp
+To compile the cpp files into object code:
 
-  Now, the object code files frac.o and main.o have been created.
+.. code-block:: bash
 
-  To link the object code:              g++ -o frac frac.o main.o
+  $ g++ -c frac.cpp
+  $ g++ -c main.cpp
 
-  This creates the executable "frac"
+Now, the object code files frac.o and main.o have been created.
 
-  run the program:                      frac
+To link the object code:
+
+.. code-block:: bash
+
+  $ g++ -o frac frac.o main.o
+
+This creates the executable "frac"
+
+run the program:
+
+.. code-block:: bash
+
+  $ ./frac
 
 
 ===
@@ -137,4 +173,5 @@ Start the container later and get a bash command line.
 
   $ docker start mycpp-1
   $ docker exec -it mycpp-1 /bin/bash
+
 
