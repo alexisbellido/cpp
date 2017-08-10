@@ -6,15 +6,24 @@ Compiling C programs with gcc
 
 The base command for the Gnu C compiler is gcc.
 
+Specifying standard and warnings following gcc documentation:
+
 .. code-block:: bash
 
-  $ gcc -o hello hello.c
+  $ gcc -Wall -std=c99 -pedantic -o hello hello.c
 
 
 Compiling C++ programs with g++
 ----------------------------------------------------
 
 The base command for the Gnu C++ compiler is g++.
+
+Specifying standard and warnings following gcc documentation:
+
+.. code-block:: bash
+
+  $ g++ -Wall -std=c++11 -o hello_world hello_world.cpp
+
 
 Single File Programs
 --------------------
@@ -35,11 +44,6 @@ uses the command format:
 This command will create an executable program called "a.out" (the default
 executable target name when one is not specified).
 
-Compiling on Ubuntu with something like this:
-
-.. code-block:: bash
-
-  $ g++ -Wall -std=c++11 -o hello_world hello_world.cpp
 
 
 ---------------------------------------------------------
