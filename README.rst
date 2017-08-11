@@ -6,11 +6,15 @@ Compiling C programs with gcc
 
 The base command for the Gnu C compiler is gcc.
 
+This output option (-o) is usually given as the last argument on the command line. If it is omitted, the output is written to a default file called ‘a.out’.
+
+The option -Wall turns on all the most commonly-used compiler warnings---it is recommended that you always use this option.
+
 Specifying standard and warnings following gcc documentation:
 
 .. code-block:: bash
 
-  $ gcc -Wall -std=c99 -pedantic -o hello hello.c
+  $ gcc -Wall -std=c99 -pedantic hello.c -o hello 
 
 
 Compiling C++ programs with g++
@@ -22,7 +26,7 @@ Specifying standard and warnings following gcc documentation:
 
 .. code-block:: bash
 
-  $ g++ -Wall -std=c++11 -o hello_world hello_world.cpp
+  $ g++ -Wall -std=c++11 hello_world.cpp -o hello_world 
 
 
 Single File Programs
@@ -178,4 +182,7 @@ Start the container later and get a bash command line.
   $ docker start mycpp-1
   $ docker exec -it mycpp-1 /bin/bash
 
+Links
+----------------------------------------------------
 
+`An introduction to GCC <http://www.network-theory.co.uk/docs/gccintro/>`_
