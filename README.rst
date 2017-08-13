@@ -67,9 +67,9 @@ The -E option causes gcc to run the preprocessor, display the expanded output, a
 
 
 Multiple file programs
-----------------------
+---------------------------------------------------------
 
-Read about `compiling multiple source files<http://www.network-theory.co.uk/docs/gccintro/gccintro_11.html>`_.
+Read about `compiling multiple source files <http://www.network-theory.co.uk/docs/gccintro/gccintro_11.html>`_.
 
 .. code-block:: bash
 
