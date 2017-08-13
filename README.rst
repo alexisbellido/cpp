@@ -30,7 +30,7 @@ Specifying standard and warnings following gcc documentation:
 
 
 Single File Programs
---------------------
+----------------------------------------------------
 
 To compile a program that is in a single file, the easiest compilation
 uses the command format:
@@ -49,10 +49,24 @@ This command will create an executable program called "a.out" (the default
 executable target name when one is not specified).
 
 
-
+C preprocessor
 ---------------------------------------------------------
 
-Multiple File Programs
+List include directories.
+
+.. code-block:: bash
+
+  $ cpp -v /dev/null -o /dev/null
+
+
+The -E option causes gcc to run the preprocessor, display the expanded output, and then exit without compiling the resulting source code. 
+
+.. code-block:: bash
+
+  $ gcc -v -E -
+
+
+Multiple file programs
 ----------------------
 
 To invoke the Compile stage, which translates source code (.cpp files)
