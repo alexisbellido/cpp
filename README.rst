@@ -52,7 +52,7 @@ executable target name when one is not specified).
 C preprocessor
 ---------------------------------------------------------
 
-List include directories.
+List directories in which system header files reside.
 
 .. code-block:: bash
 
@@ -68,6 +68,12 @@ The -E option causes gcc to run the preprocessor, display the expanded output, a
 
 Multiple file programs
 ----------------------
+
+Read about `compiling multiple source files<http://www.network-theory.co.uk/docs/gccintro/gccintro_11.html>`_.
+
+.. code-block:: bash
+
+  $ gcc -Wall -std=c99 -pedantic main.c hello_fn.c -o newhello
 
 To invoke the Compile stage, which translates source code (.cpp files)
 into object code (.o files), use the -c flag.  Format:
