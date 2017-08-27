@@ -4,23 +4,27 @@
 // TODO move functions' prototypes to header files and
 // functions' definitions to their own source file.
 
-int getline(char line[], int maxline);
-void copy(char to[], char from[]);
+// using external variables, not a good idea but using just for example
+int max;
+char line[MAXLINE];
+char longest[MAXLINE];
+
+int getline(void);
+void copy(void);
 
 /* print longest input line */
 int main() {
     int len;
-    int max;
-    char line[MAXLINE];
-    char longest[MAXLINE];
+    extern int max;
+    extern char longest[];
 
     max = 0;
-    while ((len = getline(line, MAXLINE)) > 0) {
+    while ((len = getline()) > 0) {
         printf("len for this line is %d\n", len);
         if (len > max) {
             max = len;
             printf("max so far is %d\n", max);
-            copy(longest, line);
+            copy();
         }
     }
 
@@ -31,28 +35,28 @@ int main() {
     return 0;
 }
 
-/* read a line into s, return length */
-
-int getline(char s[], int lim) {
+int getline(void) {
     int c, i;
-    for (i = 0; i < (lim - 1) && (c=getchar()) != EOF && c != '\n'; ++i) {
-        s[i] = c;
+    extern char line[];
+
+    for (i = 0; i < (MAXLINE - 1) && (c=getchar()) != EOF && c != '\n'; ++i) {
+        line[i] = c;
     }
     if (c == '\n') {
-        s[i] = c;
+        line[i] = c;
         ++i;
     }
-    s[i] = '\0';
+    line[i] = '\0';
     return i;
 }
 
-/* copy 'from' into 'to'; assume to is big enough */
-void copy(char to[], char from[]) {
+void copy(void) {
     int i;
+    extern char line[], longest[];
 
     i = 0;
     printf("Copying\n");
-    while ((to[i] = from[i]) != '\0') {
+    while ((longest[i] = line[i]) != '\0') {
         ++i;
     }
 }

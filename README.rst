@@ -163,3 +163,9 @@ Links
 ----------------------------------------------------
 
 `An introduction to GCC <http://www.network-theory.co.uk/docs/gccintro/>`_
+
+Concepts
+----------------------------------------------------
+
+We will generally use parameter for a variable named in the parenthesized list in a function definition, and argument for the value used in a call of the function.
+
