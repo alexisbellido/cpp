@@ -65,6 +65,10 @@ The -E option causes gcc to run the preprocessor, display the expanded output, a
 
   $ gcc -v -E -
 
+Standard library for C on Debian systems: /usr/local/lib/gcc/x86_64-linux-gnu/7.1.0/include
+
+Standard library for C++ on Debian systems: /usr/include/c++/6.3.0/
+
 
 Multiple file programs
 ---------------------------------------------------------
