@@ -1,1 +1,0 @@
-int bitcount(int x);
